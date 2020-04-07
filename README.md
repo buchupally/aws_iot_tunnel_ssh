@@ -3,7 +3,7 @@
 
 
 ### Usage
-Open a Tunnel using [this]([https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunnel-tutorial.html](https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunnel-tutorial.html)) tutorial to obtain a source access token first.
+Open a Tunnel using [this](https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunnel-tutorial.html) tutorial to obtain a source access token first.
 
 Login using a username/password...
 ```sh
