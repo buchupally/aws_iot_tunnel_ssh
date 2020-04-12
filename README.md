@@ -1,5 +1,5 @@
 ## Docker image for AWS IoT Secure Tunnel ssh client
-[AWS IoT Secure Tunneling](https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunneling.html) requires a localproxy which needs to be built from sources. This Docker images uses a pre-built image from [https://github.com/t04glovern/aws-greener-grass](https://github.com/t04glovern/aws-greener-grass) so we can ssh from Windows/Mac desktops without having to build from sources.
+[AWS IoT Secure Tunneling](https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunneling.html) requires a localproxy which needs to be built from sources. This Docker image uses a pre-built localproxy from [https://github.com/t04glovern/aws-greener-grass](https://github.com/t04glovern/aws-greener-grass) so we can ssh from Windows/Mac desktops without having to build from sources.
 
 
 ### Usage
@@ -23,4 +23,4 @@ docker run -it --rm \
 	-v $PWD:/host \
 	buchupally/aws_iot_tunnel_ssh
 ```
-NOTE: This container only helps with ssh once the tunnel is open on the destination IoT device which needs an agent that listens for the open tunnel message from AWS IoT and runs the localproxy in destination mode. See [https://docs.aws.amazon.com/iot/latest/developerguide/agent-snippet.html](https://docs.aws.amazon.com/iot/latest/developerguide/agent-snippet.html) or [https://devopstar.com/2019/11/24/greener-grass-device-setup](https://devopstar.com/2019/11/24/greener-grass-device-setup).
+NOTE: This container only helps with ssh once the tunnel is open on the destination IoT device. The device itself needs an agent that listens for the open tunnel mqtt message from AWS IoT and runs the localproxy in destination mode to open the tunnel. See [https://docs.aws.amazon.com/iot/latest/developerguide/agent-snippet.html](https://docs.aws.amazon.com/iot/latest/developerguide/agent-snippet.html) or [https://devopstar.com/2019/11/24/greener-grass-device-setup](https://devopstar.com/2019/11/24/greener-grass-device-setup).
